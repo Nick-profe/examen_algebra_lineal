@@ -1,28 +1,30 @@
-import numpy as np
+iimport numpy as np
+import pandas as pd
+import os
 
 # EXAMEN 1
 # Álgebra lineal aplicada a regresión lineal
 # ============================================================
 
-# Nombre:
-# Apellido 1:
-# Apellido 2:
-# Rama:
+# Nombre: Juan Sebastian 
+# Apellido 1: Galindez 
+# Apellido 2: Franco
+# Rama: Galindez_Franco
 
 
 # 1. CARGA DE DATOS
 # ------------------------------------------------------------
 
-data =
+data = pd.read_csv("/mnt/c/WINDOWS/system32/parcial1/examen_algebra_lineal/data/sales_data.csv")
 
-x =
-y =
+x = np.array(data["advertising"])
+y = np.array(data["sales"])
 
 
 # 2. MATRIZ DE DISEÑO
 # ------------------------------------------------------------
 
-X =
+X = np.column_stack((np.ones(len(x)),x))
 
 print("X:")
 print(X)
@@ -34,8 +36,8 @@ print("Shape y:", )
 # 3. OPERACIONES MATRICIALES
 # ------------------------------------------------------------
 
-XtX =
-Xty =
+XtX = X.T @ X
+Xty = X.T @ y
 
 
 # 4. ESTIMACIÓN DE PARÁMETROS
