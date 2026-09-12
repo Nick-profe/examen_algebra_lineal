@@ -87,29 +87,24 @@ print(error_norm)
 # ------------------------------------------------------------
 
 # 1. ¿Qué representa cada fila de X?
-# Respuesta:
-
+# Respuesta: Una observación: el término independiente y la inversión en publicidad.
 
 # 2. ¿Por qué X contiene una primera columna de unos?
-# Respuesta:
-
+# Respuesta: Para representar el intercepto beta_0 en el producto X @ beta.
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
-# Respuesta:
-
+# Respuesta: Es 2 x 2, porque X tiene dos columnas: unos y advertising.
 
 # 4. ¿Qué representa beta_0 dentro de este problema?
-# Respuesta:
-
+# Respuesta: Las ventas estimadas cuando la inversión en publicidad es cero.
 
 # 5. ¿Qué representa beta_1 dentro de este problema?
-# Respuesta:
-
+# Respuesta: El cambio estimado en ventas por cada unidad adicional de publicidad.
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
-# Respuesta:
-
+# Respuesta: Que las predicciones están cerca de los valores reales del dataset.
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
-# Respuesta:
+# Respuesta: Porque multiplica cada fila de X por los parámetros beta y produce un valor por observación.
+
