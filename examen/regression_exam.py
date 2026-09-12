@@ -83,29 +83,40 @@ print(error_norm)
 # ------------------------------------------------------------
 
 # 1. ¿Qué representa cada fila de X?
-# Respuesta:
+# Respuesta: Cada fila es un dato del dataset, en este caso una cantidad
+# de inversión en publicidad, con el 1 al inicio que sirve para meter el
+# intercepto en la cuenta.
 
 
 # 2. ¿Por qué X contiene una primera columna de unos?
-# Respuesta:
+# Respuesta: Porque si no la pusiera, no habría forma de que beta_0
+# apareciera en el producto matricial. El 1 multiplicado por
+# beta_0 simplemente deja el valor de beta_0 tal cual.
 
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
-# Respuesta:
+# Respuesta: Queda una matriz 2x2. X.T queda de 2xn y X de nx2, entonces al
+# multiplicarlas las n de adentro se cancelan y quedan las dos de afuera,
+# osea 2x2.
 
 
 # 4. ¿Qué representa beta_0 dentro de este problema?
-# Respuesta:
+# Respuesta: Es el intercepto, o sea lo que el modelo predice de ventas si
+# la inversión en publicidad fuera 0.
 
 
 # 5. ¿Qué representa beta_1 dentro de este problema?
-# Respuesta:
+# Respuesta: Es la pendiente, muestra cuánto suben las ventas estimadas por
+# cada unidad extra que se invierte en publicidad.
 
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
-# Respuesta:
+# Respuesta: Que el modelo está prediciendo bastante cerca de los valores
+# reales, osea que casi no se está equivocando en sus predicciones.
 
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
-# Respuesta:
+# Respuesta: Porque ese producto matricial calcula la predicción de cada
+# fila al mismo tiempo, en vez de tener que ir fila por fila con un for,
+# lo cual es mucho más eficiente.
