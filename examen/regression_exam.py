@@ -109,6 +109,11 @@ el 8 interno se cancela y quedan los dos números externos: 2 y 2.
 # 4. ¿Qué representa beta_0 dentro de este problema?
 # Respuesta:
 
+"""
+Es el intercepto. Representa las ventas estimadas cuando la inversión en publicidad es 0.
+
+"""
+
 
 # 5. ¿Qué representa beta_1 dentro de este problema?
 # Respuesta:
