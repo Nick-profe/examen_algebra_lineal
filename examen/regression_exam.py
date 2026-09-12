@@ -80,29 +80,34 @@ print(error_norm)
 # ------------------------------------------------------------
 
 # 1. ¿Qué representa cada fila de X?
-# Respuesta:
+# Respuesta: En la matriz X, cada fila representa un punto de datos.
+# La primera columna de unos representa el término constante (intercepto) del modelo de regresión, mientras que la segunda columna contiene
+#  los valores de la variable independiente x para cada observación.
 
 
 # 2. ¿Por qué X contiene una primera columna de unos?
-# Respuesta:
+# Respuesta: La primera columna de unos en la matriz X se incluye para representar el término constante del intercepto
+# sin esto, el modelo de regresión lineal no podría estimar un valor de intercepto, lo que limitaría la capacidad del modelo para ajustarse a los datos.
 
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
-# Respuesta:
+# Respuesta: La dimensión de X.T @ X es (2, 2) porque X tiene una forma de (8, 2), donde 8 es el número de filas, y 2 es el numero de columnas. 
+# Al multiplicar X transpuesta (2, 8) por X (8, 2), el resultado es una matriz de (2, 2).
 
 
 # 4. ¿Qué representa beta_0 dentro de este problema?
-# Respuesta:
+# Respuesta: Beta_0 representa el intercepto de la linea de regresion, es decir el valor de y cuando x es igual a cero. 
 
 
 # 5. ¿Qué representa beta_1 dentro de este problema?
-# Respuesta:
-
+# Respuesta: Beta_1 representa la pendiente de la línea de regresión, es decir, el cambio esperado en la variable dependiente y por cada unidad de cambio en la variable independiente x
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
-# Respuesta:
+# Respuesta: Que la norma del error sea pequeña indica que las predicciones del modelo están muy cerca de los valores reales, lo que sugiere un buen ajuste del modelo a los datos
 
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
-# Respuesta:
+# Respuesta: La operación X @ beta permite obtener todas las predicciones simultáneamente porque es una multiplicación matricial que combina la matriz de diseño X con el vector de parámetros beta. 
+# Cada fila de X representa un punto de datos, y al multiplicar por beta, se calcula la predicción correspondiente para cada punto de datos en una sola operación, generando un vector de predicciones y_pred 
+# que contiene todas las predicciones del modelo para los datos de entrada.
