@@ -82,29 +82,28 @@ print(error_norm)
 # ------------------------------------------------------------
 
 # 1. ¿Qué representa cada fila de X?
-# Respuesta:
-
+# Respuesta: cada fila representa una observacion que contiene el valor de la variable predictora.
 
 # 2. ¿Por qué X contiene una primera columna de unos?
-# Respuesta:
-
+# Respuesta: para que se permita incorporar el intercepto en el modelo de regresión lineal, permitiendo así que la ecuación de la recta tenga un término constante.
+#
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
-# Respuesta:
+# Respuesta: 2x2, porque X tiene 8 filas y 2 columnas, entonces al multiplicar X.T (2x8) por X (8x2) se obtiene una matriz de 2x2.
 
 
 # 4. ¿Qué representa beta_0 dentro de este problema?
-# Respuesta:
+# Respuesta: beta_0 representa el intercepto de la recta de regresión, es decir, el valor estimado de y cuando x es igual a cero.
 
 
 # 5. ¿Qué representa beta_1 dentro de este problema?
-# Respuesta:
+# Respuesta: beta_1 representa la pendiente de la recta de regresión, es decir, el cambio estimado en y por cada unidad de cambio en x.
 
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
-# Respuesta:
+# Respuesta: Significa que las predicciones del modelo están muy cerca de los valores reales, lo que indica un buen ajuste del modelo a los datos observados.
 
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
-# Respuesta:
+# Respuesta: Porque X @ beta es una operación matricial que aplica la transformación lineal definida por beta a toda la matriz X, resultando en un vector con todas las predicciones.
