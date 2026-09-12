@@ -91,25 +91,25 @@ print(error_norm)
 
 
 # 2. ¿Por qué X contiene una primera columna de unos?
-# Respuesta: X contiene una primera columna de unos para el termino independiente β0 para incorporarlo dentro de la matriz
+# Respuesta: X contiene una primera columna de unos para el termino independiente beta_0 para incorporarlo dentro de la matriz
 
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
-# Respuesta: 
+# Respuesta: Es (2,2) porque es una matriz con dos filas y dos columnas
 
 
 # 4. ¿Qué representa beta_0 dentro de este problema?
-# Respuesta:
+# Respuesta: beta_0 es el intercepto y representa las sales estimadas en advertising cuando es 0
 
 
 # 5. ¿Qué representa beta_1 dentro de este problema?
-# Respuesta:
+# Respuesta: beta_1 es la pendiente y representa el aumento de las sales por cada advertising adicional
 
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
-# Respuesta:
+# Respuesta: Significa que las predicciones del modelo están relativamente cerca de los valores reales.
 
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
-# Respuesta:
+# Respuesta: Porque la multiplicación matricial X @ beta aplica el modelo a cada fila de X simultáneamente
