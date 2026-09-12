@@ -91,31 +91,44 @@ print(error_norm)
 
 # 8. PREGUNTAS
 # ------------------------------------------------------------
-
+ 
 # 1. ¿Qué representa cada fila de X?
-# Respuesta:
-
-
+# Respuesta: Cada fila representa una observación (un pedido). La primera
+# columna es siempre 1 (para el término independiente beta_0) y la segunda
+# columna es el numero de productos de ese pedido (la variable x).
+ 
+ 
 # 2. ¿Por qué X contiene una primera columna de unos?
-# Respuesta:
-
-
+# Respuesta: Para poder incluir el intercepto beta_0 en el modelo. Al
+# multiplicar esa columna de unos por beta_0, se suma una constante a cada
+# prediccion; sin ella, la recta estaria forzada a pasar por el origen.
+ 
+ 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
-# Respuesta:
-
-
+# Respuesta: Es de 2x2. X tiene forma (n, 2) -n filas (observaciones) y 2
+# columnas (unos y x)-, entonces X.T tiene forma (2, n), y el producto
+# (2, n) @ (n, 2) da como resultado una matriz (2, 2).
+ 
+ 
 # 4. ¿Qué representa beta_0 dentro de este problema?
-# Respuesta:
-
-
+# Respuesta: Es el intercepto: el tiempo base de preparacion estimado
+# cuando el numero de productos es 0 (el punto donde la recta cruza el eje y).
+ 
+ 
 # 5. ¿Qué representa beta_1 dentro de este problema?
-# Respuesta:
-
-
+# Respuesta: Es la pendiente: cuantos minutos adicionales se necesitan,
+# en promedio, por cada producto extra que se agrega al pedido.
+ 
+ 
 # 6. ¿Qué significa que la norma del error sea pequeña?
-# Respuesta:
-
-
+# Respuesta: Que las predicciones del modelo estan, en conjunto, muy cerca
+# de los valores reales observados; es decir, el ajuste lineal describe
+# bien la relacion entre numero de productos y tiempo de preparacion.
+ 
+ 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
-# Respuesta:
+# Respuesta: Porque cada fila de X ya contiene [1, x_i] para cada
+# observacion i. Al multiplicar X (n, 2) por beta (2,), numpy calcula
+# beta_0*1 + beta_1*x_i para cada fila al mismo tiempo, produciendo un
+# vector con las n predicciones de una sola operacion matricial.
