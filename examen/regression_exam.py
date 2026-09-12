@@ -83,29 +83,40 @@ print(error_norm)
 # ------------------------------------------------------------
 
 # 1. ¿Qué representa cada fila de X?
-# Respuesta:
+# Respuesta: Cada fila es un dato de nuestra tabla: 
+# un 1 fijo (que usamos como "truco" matemático) y el número de inversión en publicidad 
+# de ese mes o registro.
 
 
 # 2. ¿Por qué X contiene una primera columna de unos?
-# Respuesta:
+# Respuesta:Es un truco para que la fórmula funcione bien. 
+# Ese 1 hace que Beta_0 (el punto de partida del modelo) se sume solo, sin depender 
+# de ningún dato, en cada predicción.
 
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
-# Respuesta:
+# Respuesta: : Es una matriz de 2x2. Es 2x2 porque X tiene solo 2 columnas 
+# (el 1 y la publicidad), y cuando multiplicas una matriz por su transpuesta de esta forma, 
+# el resultado siempre queda del tamaño "número de columnas x número de columnas".
 
 
 # 4. ¿Qué representa beta_0 dentro de este problema?
-# Respuesta:
+# Respuesta: : Es el punto de partida: 
+# cuántas ventas tendríamos si no invirtiéramos nada en publicidad.
 
 
 # 5. ¿Qué representa beta_1 dentro de este problema?
-# Respuesta:
+# Respuesta: : Es cuánto suben las ventas por cada peso (o unidad) extra 
+# que se invierte en publicidad.
 
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
-# Respuesta:
+# Respuesta: Significa que el modelo está prediciendo casi lo mismo que pasó en la realidad,
+#  es decir, que se equivoca poco.
 
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
-# Respuesta:
+# Respuesta:Porque en lugar de calcular la predicción dato por dato con una
+#  fórmula repetida muchas veces, esta multiplicación hace todos los cálculos
+#  de una sola vez para toda la tabla.
