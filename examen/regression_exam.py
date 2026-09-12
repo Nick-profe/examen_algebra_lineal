@@ -132,6 +132,10 @@ es decir, el modelo ajusta bien los datos.
 
 """
 
-# 7. ¿Por qué X @ beta permite obtener todas las
-#    predicciones simultáneamente?
+# 7. ¿Por qué X @ beta permite obtener todas las predicciones simultáneamente?
 # Respuesta:
+
+"""
+Porque la multiplicación matricial calcula la predicción de todas las filas al mismo tiempo
+
+"""
