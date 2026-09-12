@@ -74,6 +74,9 @@ print("Prediction:", prediction)
 
 y_pred = X @ beta
 
+print("Predictions:")
+print(y_pred)
+
 
 # 7. ERROR
 # ------------------------------------------------------------
