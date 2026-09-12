@@ -126,6 +126,11 @@ Es la pendiente. Indica cuánto aumentan las ventas por cada unidad adicional qu
 # 6. ¿Qué significa que la norma del error sea pequeña?
 # Respuesta:
 
+"""
+Que las predicciones del modelo están muy cerca de los valores reales, 
+es decir, el modelo ajusta bien los datos.
+
+"""
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
