@@ -107,7 +107,6 @@ print(error_norm)
 # 5. ¿Qué representa beta_1 dentro de este problema?
 # Respuesta: 
 
-
 # 6. ¿Qué significa que la norma del error sea pequeña?
 # Respuesta: 
 
