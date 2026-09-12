@@ -118,6 +118,10 @@ Es el intercepto. Representa las ventas estimadas cuando la inversión en public
 # 5. ¿Qué representa beta_1 dentro de este problema?
 # Respuesta:
 
+"""
+Es la pendiente. Indica cuánto aumentan las ventas por cada unidad adicional que se invierte en publicidad.
+
+"""
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
 # Respuesta:
