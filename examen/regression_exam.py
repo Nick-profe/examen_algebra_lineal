@@ -108,6 +108,4 @@ print(error_norm)
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
-# Respuesta:
-
-
+# Respuesta: 
