@@ -15,3 +15,8 @@ Cada estudiante deberá trabajar exclusivamente en la rama asignada para la eval
 8. NO crear Pull Request.
 9. NO hacer merge.
 10. NO modificar examen_1 ni main.
+
+## Ejecucion archivo
+```bash
+python examen/regression_examen.py
+```
