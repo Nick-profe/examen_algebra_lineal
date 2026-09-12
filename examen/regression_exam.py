@@ -85,6 +85,12 @@ print(error_norm)
 
 # 1. ¿Qué representa cada fila de X?
 # Respuesta:
+"""
+Cada fila de X representa una observación de la base de datos, es decir,
+un nivel de inversión en publicidad y su columna de unos asociada. Por ejemplo,
+la fila [1, 5] corresponde al caso donde se invirtieron 5 unidades en publicidad.
+
+"""
 
 
 # 2. ¿Por qué X contiene una primera columna de unos?
