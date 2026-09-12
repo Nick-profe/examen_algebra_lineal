@@ -107,7 +107,8 @@ print(error_norm)
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
 # Respuesta: Significa que, en conjunto, las predicciones están
-# relativamente cerca de los valores reales.
+# relativamente cerca de los valores reales, por lo que el modelo
+# presenta un error de ajuste relativamente bajo.
 
 
 # 7. ¿Por qué X @ beta permite obtener todas las
