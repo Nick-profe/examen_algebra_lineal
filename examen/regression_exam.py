@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import os
+
 
 # EXAMEN 1
 # Álgebra lineal aplicada a regresión lineal
