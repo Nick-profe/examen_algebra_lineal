@@ -42,13 +42,20 @@ Xty = X.T @ y
 # 4. ESTIMACIÓN DE PARÁMETROS
 # ------------------------------------------------------------
 B, residuals, rank, s = np.linalg.lstsq(X, y, rcond=None)
+Beta = np.linalg.inv(XtX) @ Xty
 beta = B
 
 beta_0 = beta[0]
 beta_1 = beta[1]
 
+Beta_0 = Beta[0]
+Beta_1 = Beta[1]
+
 print("Beta 0:", beta_0)
 print("Beta 1:", beta_1)
+
+print("Beta 0 (from matrix inversion):", Beta_0)
+print("Beta 1 (from matrix inversion):", Beta_1)
 
 
 # 5. PREDICCIÓN
@@ -57,27 +64,36 @@ print("Beta 1:", beta_1)
 x_new = np.array([1, 9])
 
 prediction = x_new @ beta
+prediction_matrix_inversion = x_new @ Beta
 
 print("Prediction:", prediction)
+print("Prediction (from matrix inversion):", prediction_matrix_inversion)
 
 
 # 6. PREDICCIONES DEL DATASET
 # ------------------------------------------------------------
 
 y_pred = X @ beta
+y_pred_matrix_inversion = X @ Beta
 
 
 # 7. ERROR
 # ------------------------------------------------------------
 
 errors = y - y_pred
+errors_matrix_inversion = y - y_pred_matrix_inversion
 error_norm = np.linalg.norm(errors)
+error_norm_matrix_inversion = np.linalg.norm(errors_matrix_inversion)
 
 print("Error vector:")
 print(errors)
+print("Error vector (from matrix inversion):")
+print(errors_matrix_inversion)
 
 print("Error norm:")
 print(error_norm)
+print("Error norm (from matrix inversion):")
+print(error_norm_matrix_inversion)
 
 
 # 8. PREGUNTAS
