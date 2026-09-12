@@ -84,28 +84,37 @@ print(error_norm)
 
 # 1. ¿Qué representa cada fila de X?
 # Respuesta:
-
+# Cada fila de X representa una observación o dato
+# correspondiente a un valor de publicidad y su respectiva venta
 
 # 2. ¿Por qué X contiene una primera columna de unos?
 # Respuesta:
-
+# La primera columna de 1 permite incluir el término independiente
+# beta_0 en el modelo de regresión lineal.
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
 # Respuesta:
 
+# X tiene dimensión 8x2 y X.T tiene dimensión 2x8.
+# Por eso X.T @ X tiene dimensión 2x2
 
 # 4. ¿Qué representa beta_0 dentro de este problema?
 # Respuesta:
-
+# beta_0 representa las ventas estimadas cuando la inversión en publicidad
+# es igual a 0
 
 # 5. ¿Qué representa beta_1 dentro de este problema?
 # Respuesta:
-
+# representa cuánto aumentan las ventas estimadas por cada
+# unidad adicional de inversión en publicidad
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
 # Respuesta:
-
+# significa que las predicciones del modelo
+# están cerca de los valores reales de ventas
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
 # Respuesta:
+# X @ beta permite calcular las predicciones de todas las observaciones
+# al mismo tiempo mediante una sola multiplicación matricial.
