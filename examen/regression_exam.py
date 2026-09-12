@@ -15,8 +15,8 @@ import numpy as np
 
 data =
 
-x =
-y =
+x = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+y = np.array([3.2, 4.8, 7.3, 8.7, 11.1, 12.8, 15.2, 16.7])
 
 
 # 2. MATRIZ DE DISEÑO
