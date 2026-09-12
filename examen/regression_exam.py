@@ -1,4 +1,4 @@
-iimport numpy as np
+import numpy as np
 import pandas as pd
 import os
 
@@ -43,10 +43,10 @@ Xty = X.T @ y
 # 4. ESTIMACIÓN DE PARÁMETROS
 # ------------------------------------------------------------
 
-beta =
+beta = np.linalg.inv(XtX) @ Xty
 
-beta_0 =
-beta_1 =
+beta_0 = beta[0]
+beta_1 = beta[1]
 
 print("Beta 0:", beta_0)
 print("Beta 1:", beta_1)
@@ -57,7 +57,7 @@ print("Beta 1:", beta_1)
 
 x_new = np.array([1, 9])
 
-prediction =
+prediction = x_new @ beta
 
 print("Prediction:", prediction)
 
@@ -65,14 +65,14 @@ print("Prediction:", prediction)
 # 6. PREDICCIONES DEL DATASET
 # ------------------------------------------------------------
 
-y_pred =
+y_pred = X @ beta
 
 
 # 7. ERROR
 # ------------------------------------------------------------
 
-errors =
-error_norm =
+errors = y - y_pred
+error_norm = np.linalg.norm(errors)
 
 print("Error vector:")
 print(errors)
