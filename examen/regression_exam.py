@@ -37,6 +37,9 @@ print("Shape y:", y.shape)
 XtX = X.T @ X
 Xty = X.T @ y
 
+print("XtX:", XtX)
+print("Shape XtX:", XtX.shape)
+
 
 # 4. ESTIMACIÓN DE PARÁMETROS
 # ------------------------------------------------------------
@@ -64,6 +67,7 @@ print("Prediction:", prediction)
 # ------------------------------------------------------------
 
 y_pred = X @ beta
+print("Prediction dataset:", y_pred)
 
 
 # 7. ERROR
@@ -83,15 +87,15 @@ print(error_norm)
 # ------------------------------------------------------------
 
 # 1. ¿Qué representa cada fila de X?
-# Respuesta:
+# Respuesta: Cada fila de X representa una observación del conjunto de datos, donde la primera posición corresponde a la constante y la segunda al valor de advertising
 
 
 # 2. ¿Por qué X contiene una primera columna de unos?
-# Respuesta:
+# Respuesta: X contiene una primera columna de unos para el termino independiente β0 para incorporarlo dentro de la matriz
 
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
-# Respuesta:
+# Respuesta: 
 
 
 # 4. ¿Qué representa beta_0 dentro de este problema?
