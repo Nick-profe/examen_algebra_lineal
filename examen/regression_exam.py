@@ -83,21 +83,24 @@ print(error_norm)
 # ------------------------------------------------------------
 
 # 1. ¿Qué representa cada fila de X?
-# Respuesta:Corresponde a las observaciones, en este caso a la cantidad de advertisment/publicidad
+# Respuesta:Corresponde a las observaciones (filas), en este caso hace referencia 
+# a la cantidad de advertisment/publicidad
 
 
 # 2. ¿Por qué X contiene una primera columna de unos?
-# Respuesta: Para lograr incluir el intercepto en las operaciones que se van a realizar
+# Respuesta: Contiene una columna de ceros para lograr incluir el intercepto 
+# en las operaciones matriciales que se van a realizar
 
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
-# Respuesta: X.T (2,8) @  X(8,2) = (2,2)  --> (8X2)(2X8) --> La dimensión es 2,2 porque tomamos 
-# las filas de transpuesta y las columnas de la matriz original, en este caso 2 filas y 2 columnas
+# Respuesta: X.T (2,8) @  X(8,2) = (2,2)  --> (8X2)(2X8)
+# La dimensión es 2,2 porque tomamos las filas de transpuesta 
+# y las columnas de la matriz original, en este caso 2 filas y 2 columnas
 
 # 4. ¿Qué representa beta_0 dentro de este problema?
-# Respuesta: en este caso, beta_0  es el intercepto del modelo y hace referencia al valor estimado (ventas = y) cuando
-# la cantidad de publicidad (x) es igual a cero, basicamante, el valor de ventas cuando no
-# se tiene publicidad
+# Respuesta: en este caso, beta_0  es el intercepto del modelo y hace referencia al valor estimado 
+# (ventas = y) cuando la cantidad de publicidad (x) es igual a cero, basicamante, el valor de ventas
+# cuando no se tiene publicidad
 
 
 # 5. ¿Qué representa beta_1 dentro de este problema?
@@ -108,10 +111,11 @@ print(error_norm)
 # 6. ¿Qué significa que la norma del error sea pequeña?
 # Respuesta: la norma del error hace referencia a qué tan cercano está el valor
 # que predice el modelo (y_pred) frente al valor real (y). Cuando este valor es pequeño
-# o  cercano a cero, significa que la predicción realizada es buena
+# o  cercano a cero, significa que la predicción realizada por el modelo es buena
 
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
-# Respuesta: porque es una alternativa (se le conoce como vectorización) que nos permite generar todas
-# las predicciones en lugar de generar predición por predicción
+# Respuesta: es una manera más directa y estable de obtener las prediccioones, se le conoce como vectorización,     
+# aquí directamente se está tomando la matriz original por esos valor de beta de forma simultanea
+# obteniendo así todas las predicciones del modelo
