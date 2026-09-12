@@ -94,13 +94,11 @@ print(error_norm)
 # la guia del dataset.
 
 
-
 # 2. ¿Por qué X contiene una primera columna de unos?
 # Respuesta: Porque permite que el término independiente (beta_0)
 # se estime dentro de la misma multiplicación matricial X @ beta.
 # Al multiplicar 1 * beta_0, ese valor se suma automáticamente en cada
 # predicción, sin necesidad de agregarlo por separado.
-
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
 # Respuesta: Es una matriz de 2x2. X tiene dimensión (n, 2), donde n es
@@ -109,24 +107,20 @@ print(error_norm)
 # por X dimensión nx2, el resultado es una matriz de 2x2: el número
 # de filas y columnas coincide con el número de parámetros.
 
-
 # 4. ¿Qué representa beta_0 dentro de este problema?
 # Respuesta: Es el intercepto del modelo: el valor esperado de "sales"
 # cuando "advertising" es igual a 0.
 
-
 # 5. ¿Qué representa beta_1 dentro de este problema?
 # Respuesta: Es la pendiente del modelo: indica cuánto aumenta en
 # la media "sales" por cada unidad adicional de "advertising".
-
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
 # Respuesta: Significa que las predicciones del modelo y_pred están
 # muy cerca de los valores reales observados y, es decir, que el
 # modelo se ajusta bien a los datos.
 
-
 # 7. ¿Por qué X @ beta permite obtener todas las
-#    predicciones simultáneamente?
+# predicciones simultáneamente?
 # Respuesta: Porque cada fila de X, al multiplicarse por el vector beta,
 # calcula automáticamente beta_0*1 + beta_1*x para esa observación.
