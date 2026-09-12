@@ -4,47 +4,56 @@ import numpy as np
 # Álgebra lineal aplicada a regresión lineal
 # ============================================================
 
-# Nombre:
-# Apellido 1:
-# Apellido 2:
-# Rama:
+# Nombre: Santiago 
+# Apellido 1:Duque 
+# Apellido 2:Valencia
+# Rama: duque_valencia
 
 
 # 1. CARGA DE DATOS
 # ------------------------------------------------------------
 
-data =
+data = np.array([
+    [1, 3.2],
+    [2, 4.8],
+    [3, 7.3],
+    [4, 8.7],
+    [5, 11.1],
+    [6, 12.8],
+    [7, 15.2],
+    [8, 16.7]
+])
 
-x =
-y =
+x = data[:, 0]
+y = data[:, 1]
 
 
 # 2. MATRIZ DE DISEÑO
 # ------------------------------------------------------------
 
-X =
+X = np.column_stack((np.ones(len(x)), x))
 
 print("X:")
 print(X)
 
-print("Shape X:", )
-print("Shape y:", )
+print("Shape X:", X.shape)
+print("Shape y:", y.shape)
 
 
 # 3. OPERACIONES MATRICIALES
 # ------------------------------------------------------------
 
-XtX =
-Xty =
+XtX = X.T @ X
+Xty = X.T @ y
 
 
 # 4. ESTIMACIÓN DE PARÁMETROS
 # ------------------------------------------------------------
 
-beta =
+beta = np.linalg.solve(XtX, Xty)
 
-beta_0 =
-beta_1 =
+beta_0 = beta[0]
+beta_1 = beta[1]
 
 print("Beta 0:", beta_0)
 print("Beta 1:", beta_1)
@@ -55,7 +64,7 @@ print("Beta 1:", beta_1)
 
 x_new = np.array([1, 9])
 
-prediction =
+prediction = x_new @ beta
 
 print("Prediction:", prediction)
 
@@ -63,14 +72,14 @@ print("Prediction:", prediction)
 # 6. PREDICCIONES DEL DATASET
 # ------------------------------------------------------------
 
-y_pred =
+y_pred = X @ beta
 
 
 # 7. ERROR
 # ------------------------------------------------------------
 
-errors =
-error_norm =
+errors = y - y_pred
+error_norm = np.linalg.norm(errors)
 
 print("Error vector:")
 print(errors)
