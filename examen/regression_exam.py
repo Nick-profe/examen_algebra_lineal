@@ -101,8 +101,11 @@ el modelo no tendría intercepto y siempre pasaría por el origen.
 """
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
 # Respuesta:
+"""
+Es (2, 2). X es (8, 2) y X.T es (2, 8); al multiplicarlas,
+el 8 interno se cancela y quedan los dos números externos: 2 y 2.
 
-
+"""
 # 4. ¿Qué representa beta_0 dentro de este problema?
 # Respuesta:
 
