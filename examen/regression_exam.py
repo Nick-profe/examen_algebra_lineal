@@ -54,16 +54,15 @@ print("Beta 1:", beta_1)
 
 x_new = np.array([1, 9])
 
-prediction = X @ beta
+prediction = x_new @ beta
 
-print("Prediction:", prediction)
+print("Prediction para x=9:", prediction)
 
 
 # 6. PREDICCIONES DEL DATASET
 # ------------------------------------------------------------
 
 y_pred = X @ beta
-
 
 # 7. ERROR
 # ------------------------------------------------------------
@@ -82,29 +81,39 @@ print(error_norm)
 # ------------------------------------------------------------
 
 # 1. ¿Qué representa cada fila de X?
-# Respuesta:
+# Respuesta: 
+# Cada valor de la fila de X representa un conjunto de dos datos, donde la primera columna es 1 (para el término independiente) y la segunda columna es el valor de x correspondiente a un valor de "advertising" para este ejemplo.
 
 
 # 2. ¿Por qué X contiene una primera columna de unos?
-# Respuesta:
+# Respuesta: 
+# La primera columna de unos permite incluir el término independiente.
 
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
-# Respuesta:
+# Respuesta: 
+# X tiene 8 filas y 2 columnas, por lo que X es de dimensión 8 × 2 y X.T es de dimensión 2 × 8. Al multiplicarlas,
+# (2 × 8)(8 × 2) = 2 × 2. Por eso la dimensión de X.T @ X tiene dimensión 2 × 2.
 
 
 # 4. ¿Qué representa beta_0 dentro de este problema?
-# Respuesta:
+# Respuesta: 
+# beta_0 representa el intercepto de la recta, es decir, el valor estimado de "sales" cuando "advertising" = 0.
 
 
 # 5. ¿Qué representa beta_1 dentro de este problema?
-# Respuesta:
+# Respuesta: 
+# beta_1 representa la pendiente de la recta de regresión. Indica cuánto cambia el valor estimado de y (sales) por cada unidad que aumenta x (advertising).
+
 
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
-# Respuesta:
+# Respuesta: 
+# Significa que las predicciones del modelo están cerca de los valores reales de y, lo que indica un buen ajuste del modelo a los datos.
 
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
-# Respuesta:
+# Respuesta: 
+# Porque X contiene todas las observaciones y beta contiene los parámetros del modelo. La multiplicación X @ beta calcula la predicción correspondiente a cada fila de X simultáneamente.
+
