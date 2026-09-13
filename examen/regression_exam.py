@@ -109,3 +109,5 @@ print(error_norm)
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
 # Respuesta:
+# Porque la multiplicacion de la matrix X por el vector de parámetros beta, se obtiene un 
+# vector de predicciones para todos los valores de x en el dataset.
