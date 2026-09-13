@@ -98,12 +98,15 @@ print(error_norm)
 # ------------------------------------------------------------
 
 # 1. ¿Qué representa cada fila de X?
-# Respuesta:
+# Respuesta: Cada fila de X representa un dato del conjunto,
+# donde la primera columna es el término de intercepto y la segunda columna sería
+# el valor de la variable independiente correspondiente.
 
 
 # 2. ¿Por qué X contiene una primera columna de unos?
-# Respuesta:
-
+# Respuesta: La primera columna de unos en X hace que el producto matricial del modelo no esté forzado a pasar por el origen,
+#  permitiendo así que el modelo tenga un intercepto (beta_0) que se ajuste a los datos. 
+# 
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
 # Respuesta:
