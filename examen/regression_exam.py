@@ -83,29 +83,43 @@ print(error_norm)
 # ------------------------------------------------------------
 
 # 1. ¿Qué representa cada fila de X?
-# Respuesta:
+# Respuesta: Cada fila corresponde a un registro del dataset, es decir, un
+# valor específico de lo invertido en publicidad. El primer número de cada
+# fila siempre es 1, y ese es el que permite que el intercepto entre en
+# la cuenta cuando se hace la multiplicación de matrices.
 
 
 # 2. ¿Por qué X contiene una primera columna de unos?
-# Respuesta:
+# Respuesta: Es un truco matemático para que beta_0 quede incluido dentro
+# del producto matricial. Sin esa columna, no habría manera de sumar el
+# intercepto, porque toda la operación quedaría multiplicando solo por x.
 
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
-# Respuesta:
+# Respuesta: Da como resultado una matriz 2x2. Esto pasa porque X.T tiene
+# forma 2xn y X tiene forma nx2, y al multiplicar matrices las columnas de
+# la primera tienen que coincidir con las filas de la segunda (ahí se
+# cancela la n), dejando solo el 2x2 como resultado final.
 
 
 # 4. ¿Qué representa beta_0 dentro de este problema?
-# Respuesta:
+# Respuesta: Sería el punto de partida del modelo, básicamente cuánto se
+# esperaría vender si no se invirtiera nada en publicidad.
 
 
 # 5. ¿Qué representa beta_1 dentro de este problema?
-# Respuesta:
+# Respuesta: Indica el impacto de la publicidad, o sea, por cada unidad
+# extra que se invierte, cuánto sube en promedio la venta esperada.
 
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
-# Respuesta:
+# Respuesta: Quiere decir que el modelo ajusta bien, que la diferencia
+# entre lo que predijo y lo que realmente pasó es mínima en general.
 
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
-# Respuesta:
+# Respuesta: Porque con una sola operación matricial se aplica la misma
+# fórmula a todas las filas al mismo tiempo, en lugar de tener que hacer
+# un cálculo por separado para cada observación. Eso es justamente lo que
+# se conoce como vectorización.
