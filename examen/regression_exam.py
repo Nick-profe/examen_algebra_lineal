@@ -13,11 +13,19 @@ import numpy as np
 # 1. CARGA DE DATOS
 # ------------------------------------------------------------
 
-#data =
+data = np.array([
+    [1, 3.2],
+    [2, 4.8],
+    [3, 7.3],
+    [4, 8.7],
+    [5, 11.1],
+    [6, 12.8],
+    [7, 15.2],
+    [8, 16.7],
+])
 
-x = np.array([1, 2, 3, 4, 5, 6, 7, 8])
-y = np.array([3.2, 4.8, 7.3, 8.7, 11.1, 12.8, 15.2, 16.7])
-
+x = data[:, 0]   
+y = data[:, 1]   
 
 # 2. MATRIZ DE DISEÑO
 # ------------------------------------------------------------
@@ -27,8 +35,8 @@ X = np.column_stack((np.ones(len(x)), x))
 print("X:")
 print(X)
 
-print("Shape X:", )
-print("Shape y:", )
+print("Shape X:", X.shape)
+print("Shape y:", y.shape)
 
 
 # 3. OPERACIONES MATRICIALES
