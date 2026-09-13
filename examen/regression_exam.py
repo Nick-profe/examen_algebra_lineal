@@ -88,27 +88,39 @@ print(error_norm)
 # 1. ¿Qué representa cada fila de X?
 # Respuesta:
 
+# Cada fila de X representa una observación del data set
 
 # 2. ¿Por qué X contiene una primera columna de unos?
 # Respuesta:
 
+# El valor 1 permite incorporar el término independiente b0 dentro del producto matricial
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
 # Respuesta:
+
+# X tiene dimensión 8 x 2 y X.T tiene dimensión 2 x 8, por lo tanto:
+# (2 x 8) @ (8 x 2) = (2 x 2)
+# La dimensión de X.T @ X es 2 x 2
 
 
 # 4. ¿Qué representa beta_0 dentro de este problema?
 # Respuesta:
 
+#beta_0 representa el valor esperado de sales cuando advertising = 0
 
 # 5. ¿Qué representa beta_1 dentro de este problema?
 # Respuesta:
 
+# En este caso, indica el aumento promedio de las ventas por cada unidad adicional de publicidad.
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
 # Respuesta:
 
+# Significa que, en conjunto, las predicciones del modelo están relativamente cerca de los valores reales de sales.
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
 # Respuesta:
+
+#Porque el producto matricial multiplica cada fila de X por el vector de parámetros beta.
+# De esta manera, calcula las predicciones de todas las observaciones en una sola operación, esto se conoce como vectorización.
