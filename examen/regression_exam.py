@@ -91,6 +91,7 @@ print(errors)
 print("Error norm:")
 print(error_norm)
 
+print("FIN DE EXAMEN")
 
 # 8. PREGUNTAS
 # ------------------------------------------------------------
@@ -99,25 +100,26 @@ print(error_norm)
 # Respuesta: Cada fila representa una observación del problema.
 
 # 2. ¿Por qué X contiene una primera columna de unos?
-# Respuesta:
+# Respuesta: Porque la primera columna de unos, permite estimar el intercepto (beta_0) en el modelo de regresión lineal.
+
 
 
 # 3. ¿Cuál es la dimensión de X.T @ X y por qué?
-# Respuesta:
+# Respuesta: La dimensión de X.T @ X es (n x n), porque en una multiplicación matricial, la dimensión de la matriz resultante es determinada por el número de filas de la primera matriz y el número de columnas de la segunda matriz.   
 
 
 # 4. ¿Qué representa beta_0 dentro de este problema?
-# Respuesta:
+# Respuesta: beta_0 representa el intercepto de la línea de regresión, es decir, el valor de y cuando x es igual a cero. En este contexto, indica la predicción de ventas cuando no hay inversión en publicidad.   
 
 
 # 5. ¿Qué representa beta_1 dentro de este problema?
-# Respuesta:
+# Respuesta: beta_1 representa la pendiente de la línea de regresión, es decir, el cambio esperado en y por cada unidad de cambio en x. En este contexto, indica cuánto se espera que aumenten las ventas por cada unidad adicional de inversión en publicidad.
 
 
 # 6. ¿Qué significa que la norma del error sea pequeña?
-# Respuesta:
+# Respuesta: indica que, en conjunto, las predicciones están relativamente cerca de los valores reales
 
 
 # 7. ¿Por qué X @ beta permite obtener todas las
 #    predicciones simultáneamente?
-# Respuesta:
+# Respuesta: Porque la multiplicación matricial permite calcular todas las predicciones de manera eficiente, aplicando el modelo a todas las observaciones al mismo tiempo.
