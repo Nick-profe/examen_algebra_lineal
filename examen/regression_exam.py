@@ -44,6 +44,11 @@ print("Shape y:", y.shape)
 
 XtX = X.T @ X
 Xty = X.T @ y
+print(XtX)
+print("Shape XtX:", XtX.shape)
+print(Xty)
+print("Shape Xty:", Xty.shape)
+    
 
 
 # 4. ESTIMACIÓN DE PARÁMETROS
@@ -63,7 +68,7 @@ print("Beta 1:", beta_1)
 
 x_new = np.array([1, 9])
 
-prediction =
+prediction = x_new @ beta
 
 print("Prediction:", prediction)
 
@@ -71,14 +76,16 @@ print("Prediction:", prediction)
 # 6. PREDICCIONES DEL DATASET
 # ------------------------------------------------------------
 
-y_pred =
+y_pred = X @ beta
+
+print("y_pred:", y_pred)
 
 
 # 7. ERROR
 # ------------------------------------------------------------
 
-errors =
-error_norm =
+errors = y - y_pred
+error_norm = np.linalg.norm(errors)
 
 print("Error vector:")
 print(errors)
