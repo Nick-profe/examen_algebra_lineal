@@ -49,6 +49,7 @@ beta_1 = beta[1]
 print("Beta 0:", beta_0)
 print("Beta 1:", beta_1)
 
+print("Shape beta:", beta.shape)
 
 # 5. PREDICCIÓN
 # ------------------------------------------------------------
