@@ -1,80 +1,88 @@
 import numpy as np
 
-# EXAMEN 1: REGRESIÓN LINEAL
-# Estudiante: Wilson Navia Valencia
+# EXAMEN 1
+# Álgebra lineal aplicada a regresión lineal
+# Nombre: Wilson Navia
+# Apellido 1: Navia
+# Apellido 2: Valencia
 # Rama: navia_valencia
 
 # 1. CARGA DE DATOS
-# x: número de productos en el pedido
-# y: tiempo de preparación en minutos
-x = np.array([2, 4, 6, 8, 10], dtype=float)
-y = np.array([5.0, 7.1, 9.2, 10.8, 13.1], dtype=float)
+# Cada fila contiene [inversion_publicitaria, ventas].
+data = np.array(
+    [
+        [1, 3.2],
+        [2, 4.8],
+        [3, 7.3],
+        [4, 8.7],
+        [5, 11.1],
+        [6, 12.8],
+        [7, 15.2],
+        [8, 16.7],
+    ],
+    dtype=float,
+)
 
-print("Datos cargados correctamente.")
-print("x:", x)
-print("y:", y)
-# ============================================================
+x = data[:, 0]
+y = data[:, 1]
 
-# 1. CARGA Y DEFINICIÓN DE DATOS
-# x: Productos por pedido | y: Tiempo de preparación (minutos)
-x = np.array([2, 4, 6, 8, 10], dtype=float)
-y = np.array([5.0, 7.1, 9.2, 10.8, 13.1], dtype=float)
-
-# 2. CONSTRUCCIÓN DE LA MATRIZ DE DISEÑO X
-# Agregamos una columna de unos a la izquierda para el intercepto (beta_0)
+# 2. MATRIZ DE DISEÑO
 X = np.column_stack((np.ones(len(x)), x))
 
-# 3. CÁLCULO DE PRODUCTOS MATRICIALES
-XTX = X.T @ X
-XTy = X.T @ y
+print("X:")
+print(X)
+print("Shape X:", X.shape)
+print("Shape y:", y.shape)
 
-# 4. ESTIMACIÓN DE PARÁMETROS (Ecuación Normal: beta = (X^T X)^-1 X^T y)
-beta_hat = np.linalg.inv(XTX) @ XTy
-beta_0 = beta_hat[0]
-beta_1 = beta_hat[1]
+# 3. OPERACIONES MATRICIALES
+XtX = X.T @ X
+Xty = X.T @ y
 
-# 5. PREDICCIONES Y CÁLCULO DE ERRORES
-y_hat = X @ beta_hat
-errores = y - y_hat
-norma_error = np.linalg.norm(errores)
+# 4. ESTIMACIÓN DE PARÁMETROS
+beta = np.linalg.inv(XtX) @ Xty
 
-# 6. PREDICCIÓN ESPECÍFICA PARA UN PEDIDO CON 12 PRODUCTOS
-x_nuevo = np.array([1.0, 12.0])
-prediccion_12 = x_nuevo @ beta_hat
+beta_0 = beta[0]
+beta_1 = beta[1]
 
-# IMPRESIÓN DE RESULTADOS EN CONSOLA
-print("=== RESULTADOS DEL EXAMEN ===")
-print("Matriz X (Diseño):\n", X)
-print("\nMatriz X^T X:\n", XTX)
-print("\nVector X^T y:\n", XTy)
-print(f"\nParámetros Estimados:")
-print(f"  - Beta_0 (Intercepto): {beta_0:.4f}")
-print(f"  - Beta_1 (Pendiente) : {beta_1:.4f}")
-print("\nPredicciones (y_hat):\n", np.round(y_hat, 4))
-print("\nVector de Errores (e):\n", np.round(errores, 4))
-print(f"\nNorma Euclidiana del Error (||e||): {norma_error:.4f}")
-print(f"\nTiempo estimado para 12 productos: {prediccion_12:.2f} minutos")
+print("Beta 0:", beta_0)
+print("Beta 1:", beta_1)
 
-# ============================================================
-# RESPUESTAS A LAS PREGUNTAS TEÓRICAS DEL EXAMEN
-# ============================================================
-# 1. ¿Qué representa cada fila de X?
-# Resp: Cada fila representa una observación (un pedido) con el término de intercepto y el número de productos.
+# 5. PREDICCIÓN
+x_new = np.array([1, 9])
+prediction = x_new @ beta
 
-# 2. ¿Por qué X contiene una primera columna de unos?
-# Resp: Para incluir el término constante (beta_0) dentro de la multiplicación matricial.
+print("Prediction:", prediction)
 
-# 3. ¿Cuál es la dimensión de X^T X y por qué?
-# Resp: Es de dimensión 2x2, resultando de multiplicar X^T (2x5) por X (5x2), correspondiente al número de parámetros.
+# 6. PREDICCIONES DEL DATASET
+y_pred = X @ beta
 
-# 4. ¿Qué representa beta_0 en este problema?
-# Resp: El tiempo base o fijo necesario para procesar un pedido sin importar el número de productos.
+# 7. ERROR
+errors = y - y_pred
+error_norm = np.linalg.norm(errors)
 
-# 5. ¿Qué representa beta_1 en este problema?
-# Resp: El tiempo adicional estimado que toma procesar cada producto individual agregado.
+print("Error vector:")
+print(errors)
+print("Error norm:")
+print(error_norm)
 
-# 6. ¿Qué significa que la norma del error sea pequeña?
-# Resp: Indica que los valores calculados por el modelo son muy cercanos a los tiempos reales observados.
-
-# 7. ¿Por qué X @ beta permite obtener todas las predicciones simultáneamente?
-# Resp: Porque vectoriza el cálculo realizando el producto punto entre cada fila de X y el vector beta en una sola operación.
+# 8. PREGUNTAS
+# 1. Cada fila de X representa una observación: el intercepto y la
+#    inversion publicitaria de un caso.
+#
+# 2. La primera columna contiene unos para incluir beta_0, el intercepto,
+#    en el producto matricial.
+#
+# 3. XtX tiene dimension 2x2: X tiene 2 columnas (2 parametros), por lo
+#    que X.T @ X tiene tantas filas y columnas como parametros.
+#
+# 4. beta_0 representa las ventas estimadas cuando la inversion publicitaria
+#    es cero.
+#
+# 5. beta_1 representa el cambio estimado en ventas por cada unidad adicional
+#    de inversion publicitaria.
+#
+# 6. Una norma del error pequena indica que las predicciones del modelo estan
+#    cerca de los valores observados.
+#
+# 7. X @ beta calcula en una sola operacion matricial la prediccion para cada
+#    fila (observacion) de X.
