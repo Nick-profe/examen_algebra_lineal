@@ -1,0 +1,1 @@
+Corregi el examen de regresion lineal usando los datos de inversion publicitaria y ventas. Complete la matriz de diseno, el calculo de beta, la prediccion para x_new = [1, 9], las predicciones y los errores. Tambien respondi las preguntas teoricas.
