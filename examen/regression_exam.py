@@ -8,7 +8,7 @@ import numpy as np
 # Rama: navia_valencia
 
 # 1. CARGA DE DATOS
-# Cada fila contiene [inversion_publicitaria, ventas].
+# Cada fila contiene la inversion publicitaria y las ventas.
 data = np.array(
     [
         [1, 3.2],
@@ -38,7 +38,7 @@ print("Shape y:", y.shape)
 XtX = X.T @ X
 Xty = X.T @ y
 
-# 4. ESTIMACIÓN DE PARÁMETROS
+# 4. ESTIMACION DE PARAMETROS
 beta = np.linalg.inv(XtX) @ Xty
 
 beta_0 = beta[0]
@@ -47,7 +47,7 @@ beta_1 = beta[1]
 print("Beta 0:", beta_0)
 print("Beta 1:", beta_1)
 
-# 5. PREDICCIÓN
+# 5. PREDICCION
 x_new = np.array([1, 9])
 prediction = x_new @ beta
 
@@ -66,14 +66,14 @@ print("Error norm:")
 print(error_norm)
 
 # 8. PREGUNTAS
-# 1. Cada fila de X representa una observación: el intercepto y la
-#    inversion publicitaria de un caso.
+# 1. Cada fila de X representa una observacion, con el intercepto y la
+#    inversion publicitaria correspondiente.
 #
 # 2. La primera columna contiene unos para incluir beta_0, el intercepto,
-#    en el producto matricial.
+#    dentro del producto matricial.
 #
-# 3. XtX tiene dimension 2x2: X tiene 2 columnas (2 parametros), por lo
-#    que X.T @ X tiene tantas filas y columnas como parametros.
+# 3. XtX tiene dimension 2x2 porque X tiene dos columnas, una por cada
+#    parametro del modelo.
 #
 # 4. beta_0 representa las ventas estimadas cuando la inversion publicitaria
 #    es cero.
@@ -81,8 +81,8 @@ print(error_norm)
 # 5. beta_1 representa el cambio estimado en ventas por cada unidad adicional
 #    de inversion publicitaria.
 #
-# 6. Una norma del error pequena indica que las predicciones del modelo estan
-#    cerca de los valores observados.
+# 6. Una norma del error pequena indica que las predicciones estan cerca de
+#    los valores observados.
 #
 # 7. X @ beta calcula en una sola operacion matricial la prediccion para cada
-#    fila (observacion) de X.
+#    fila de X.

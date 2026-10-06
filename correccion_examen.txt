@@ -1,1 +1,1 @@
-Corregi el examen de regresion lineal usando los datos de inversion publicitaria y ventas. Complete la matriz de diseno, el calculo de beta, la prediccion para x_new = [1, 9], las predicciones y los errores. Tambien respondi las preguntas teoricas.
+Corregi el archivo examen/regression_exam.py para cargar los datos de ventas, completar la matriz de diseno, estimar beta, predecir las ventas para x = 9, calcular los errores y responder las preguntas del examen.
